@@ -73,7 +73,7 @@ public abstract class AmazonWebServiceClient {
         }
 
         try {
-            this.endpoint = new URI(endpoint.toLowerCase());
+            this.endpoint = new URI(endpoint);
         } catch (URISyntaxException e) {
             throw new IllegalArgumentException(e);
         }

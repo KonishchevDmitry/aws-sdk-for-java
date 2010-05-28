@@ -142,6 +142,11 @@ public class RunInstancesRequest extends AmazonWebServiceRequest {
     private String instanceInitiatedShutdownBehavior;
 
     /**
+     * Specifies whether the instance will have a public address
+     */
+    private String addressingType;
+
+    /**
      * Unique ID of a machine image, returned by a call to DescribeImages.
      *
      * @return Unique ID of a machine image, returned by a call to DescribeImages.
@@ -828,7 +833,19 @@ public class RunInstancesRequest extends AmazonWebServiceRequest {
         this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
         return this;
     }
-    
+
+    public String getAddressingType() {
+        return addressingType;
+    }
+
+    public void setAddressingType(String addressingType) {
+        this.addressingType = addressingType;
+    }
+
+    public RunInstancesRequest withAddressingType(String addressingType) {
+        this.addressingType = addressingType;
+        return this;
+    }
     
     @Override
     public String toString() {
