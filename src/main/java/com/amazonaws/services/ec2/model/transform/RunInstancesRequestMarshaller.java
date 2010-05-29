@@ -153,7 +153,11 @@ public class RunInstancesRequestMarshaller implements Marshaller<Request<RunInst
                 request.addParameter("InstanceInitiatedShutdownBehavior", StringUtils.fromString(runInstancesRequest.getInstanceInitiatedShutdownBehavior()));
             }
         }
-
+        if (runInstancesRequest != null) {
+            if (runInstancesRequest.getAddressingType() != null) {
+                request.addParameter("AddressingType", StringUtils.fromString(runInstancesRequest.getAddressingType()));
+            }
+        }
 
         return request;
     }
